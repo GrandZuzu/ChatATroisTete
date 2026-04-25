@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Le Chat à 3 Têtes — Troupe de comédie musicale</title>
+  <meta name="description" content="Le Chat à 3 Têtes, troupe de comédie musicale. Découvrez notre premier spectacle : Les Sœurs en Répèt'." />
+  <meta property="og:title" content="Le Chat à 3 Têtes" />
+  <meta property="og:description" content="Troupe de comédie musicale. Premier spectacle : Les Sœurs en Répèt'." />
+  <meta property="og:type" content="website" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <header class="site-header" id="top">
+    <div class="container nav-row">
+      <a href="#top" class="brand" aria-label="Le Chat à 3 Têtes — accueil">
+        <span class="brand-mark" aria-hidden="true">
+          <!-- Placeholder logo : trois oreilles de chat. Remplacer par assets/logo.png si dispo. -->
+          <svg viewBox="0 0 64 64" width="40" height="40" role="img" aria-label="Logo Le Chat à 3 Têtes">
+            <circle cx="32" cy="32" r="31" fill="#0e0e0e" stroke="#c8102e" stroke-width="2"/>
+            <path d="M14 38 L20 22 L26 38 Z M26 38 L32 18 L38 38 Z M38 38 L44 22 L50 38 Z" fill="#ffffff"/>
+            <circle cx="20" cy="32" r="1.6" fill="#c8102e"/>
+            <circle cx="32" cy="28" r="1.6" fill="#c8102e"/>
+            <circle cx="44" cy="32" r="1.6" fill="#c8102e"/>
+          </svg>
+        </span>
+        <span class="brand-text">
+          <span class="brand-name">Le Chat à 3 Têtes</span>
+          <span class="brand-tag">Troupe de comédie musicale</span>
+        </span>
+      </a>
+
+      <button class="nav-toggle" aria-expanded="false" aria-controls="primary-nav" aria-label="Ouvrir le menu">
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav id="primary-nav" class="primary-nav" aria-label="Navigation principale">
+        <a href="#association">L'association</a>
+        <a href="#spectacle">Le spectacle</a>
+        <a href="#contact">Contact</a>
+        <a href="https://www.instagram.com/lechata3tetes/" class="nav-cta" target="_blank" rel="noopener">Instagram</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+    <section class="hero">
+      <div class="hero-bg" aria-hidden="true">
+        <div class="curtain curtain-left"></div>
+        <div class="curtain curtain-right"></div>
+      </div>
+      <div class="container hero-inner">
+        <p class="eyebrow">Troupe de comédie musicale</p>
+        <h1 class="hero-title">
+          Le Chat<br/>
+          <span class="accent">à 3 Têtes</span>
+        </h1>
+        <p class="hero-sub">Trois voix, mille histoires. Une troupe qui chante, danse et joue pour faire vibrer la scène.</p>
+        <div class="hero-actions">
+          <a href="#spectacle" class="btn btn-primary">Découvrir le spectacle</a>
+          <a href="#contact" class="btn btn-ghost">Nous contacter</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="association" class="section">
+      <div class="container grid-2">
+        <div>
+          <p class="eyebrow">L'association</p>
+          <h2>Une troupe, une passion : la scène.</h2>
+        </div>
+        <div class="prose">
+          <p>
+            <strong>Le Chat à 3 Têtes</strong> est une jeune troupe de comédie musicale
+            qui réunit chanteurs, danseurs et comédiens autour d'un même feu sacré :
+            l'amour de la scène et du spectacle vivant.
+          </p>
+          <p>
+            Portés par l'envie de créer ensemble, nous mettons en commun nos
+            talents pour donner vie à des spectacles fédérateurs, drôles et
+            sincères — où l'émotion et le rire ne sont jamais loin.
+          </p>
+          <ul class="badges">
+            <li>Chant</li>
+            <li>Danse</li>
+            <li>Théâtre</li>
+            <li>Mise en scène</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="spectacle" class="section section-dark">
+      <div class="container">
+        <div class="show-header">
+          <p class="eyebrow eyebrow-light">Notre premier spectacle</p>
+          <h2 class="show-title">Les Sœurs<br/><em>en Répèt'</em></h2>
+          <p class="show-status"><span class="dot"></span> En cours de création</p>
+        </div>
+
+        <div class="show-body">
+          <p class="lede">
+            Une troupe se prépare à monter <em>Sister Act</em>.
+            Mais entre fous rires, fausses notes et grands moments d'émotion,
+            la répétition tourne au véritable spectacle.
+          </p>
+          <p>
+            Une mise en abyme jubilatoire, où la coulisse devient la scène : on suit
+            la troupe au plus près, dans ses doutes et ses éclats, pour un
+            hommage tendre et déjanté à la passion du théâtre musical.
+          </p>
+
+          <div class="show-grid">
+            <div class="show-card">
+              <h3>Le concept</h3>
+              <p>Une comédie musicale qui raconte les coulisses d'une comédie musicale. La répétition comme spectacle.</p>
+            </div>
+            <div class="show-card">
+              <h3>L'inspiration</h3>
+              <p>Librement inspiré de <em>Sister Act</em>, avec ses chœurs entraînants et son énergie contagieuse.</p>
+            </div>
+            <div class="show-card">
+              <h3>Le ton</h3>
+              <p>Drôle, sincère, généreux. Du rire, des larmes, et beaucoup de musique.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="section">
+      <div class="container grid-2">
+        <div>
+          <p class="eyebrow">Contact</p>
+          <h2>Programmer, soutenir, rejoindre la troupe ?</h2>
+          <p class="prose">
+            Une salle, un festival, un projet en tête ? Écrivez-nous, on vous répond.
+          </p>
+        </div>
+        <div class="contact-card">
+          <dl class="contact-list">
+            <div>
+              <dt>Email</dt>
+              <dd><a href="mailto:contact@lechata3tetes.fr">contact@lechata3tetes.fr</a></dd>
+            </div>
+            <div>
+              <dt>Téléphone</dt>
+              <dd><a href="tel:+33000000000">+33 0 00 00 00 00</a></dd>
+            </div>
+            <div>
+              <dt>Basée à</dt>
+              <dd>Ville à compléter</dd>
+            </div>
+            <div>
+              <dt>Réseaux</dt>
+              <dd>
+                <a href="https://www.instagram.com/lechata3tetes/" target="_blank" rel="noopener">@lechata3tetes</a>
+              </dd>
+            </div>
+          </dl>
+          <p class="contact-note">Coordonnées provisoires — à mettre à jour.</p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-row">
+      <p>© <span id="year"></span> Le Chat à 3 Têtes — Tous droits réservés.</p>
+      <nav aria-label="Liens secondaires">
+        <a href="#association">L'association</a>
+        <a href="#spectacle">Le spectacle</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
