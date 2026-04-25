@@ -16,3 +16,7 @@ npm-debug.log*
 # Local env
 .env
 .env.local
+
+# Médias bruts et cache d'optimisation (lourds, gardés en local)
+assets/photos/
+assets/photos-web/

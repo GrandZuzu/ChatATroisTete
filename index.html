@@ -37,6 +37,7 @@
       <nav id="primary-nav" class="primary-nav" aria-label="Navigation principale">
         <a href="#association">L'association</a>
         <a href="#spectacle">Le spectacle</a>
+        <a href="#galerie">Galerie</a>
         <a href="#contact">Contact</a>
         <a href="https://www.instagram.com/lechata3tetes/" class="nav-cta" target="_blank" rel="noopener">Instagram</a>
       </nav>
@@ -129,6 +130,41 @@
         </div>
       </div>
     </section>
+
+    <section id="galerie" class="section section-tinted">
+      <div class="container">
+        <div class="gallery-header">
+          <p class="eyebrow">En coulisses</p>
+          <h2>La troupe en répèt'</h2>
+          <p class="prose">Quelques moments volés à la troupe, en pleine création de notre premier spectacle.</p>
+        </div>
+
+        <ul class="gallery" role="list">
+          <li><button type="button" class="gallery-item" data-index="0" aria-label="Agrandir la photo 1"><img src="assets/gallery/01-thumb.webp" alt="La troupe en cercle dans le jardin." loading="lazy" width="600" height="450" /></button></li>
+          <li><button type="button" class="gallery-item" data-index="1" aria-label="Agrandir la photo 2"><img src="assets/gallery/02-thumb.webp" alt="Discussion autour d'un script en plein soleil." loading="lazy" width="600" height="450" /></button></li>
+          <li><button type="button" class="gallery-item" data-index="2" aria-label="Agrandir la photo 3"><img src="assets/gallery/03-thumb.webp" alt="Travail en groupe sous l'arbre." loading="lazy" width="600" height="450" /></button></li>
+          <li><button type="button" class="gallery-item" data-index="3" aria-label="Agrandir la photo 4"><img src="assets/gallery/04-thumb.webp" alt="Deux comédiennes répètent leur scène." loading="lazy" width="600" height="450" /></button></li>
+          <li><button type="button" class="gallery-item" data-index="4" aria-label="Agrandir la photo 5"><img src="assets/gallery/05-thumb.webp" alt="La troupe en mouvement, vue de dos." loading="lazy" width="600" height="450" /></button></li>
+          <li><button type="button" class="gallery-item" data-index="5" aria-label="Agrandir la photo 6"><img src="assets/gallery/06-thumb.webp" alt="Cercle d'écoute au cours de la répétition." loading="lazy" width="600" height="450" /></button></li>
+          <li><button type="button" class="gallery-item" data-index="6" aria-label="Agrandir la photo 7"><img src="assets/gallery/07-thumb.webp" alt="Moment de concentration au soleil." loading="lazy" width="600" height="450" /></button></li>
+          <li><button type="button" class="gallery-item" data-index="7" aria-label="Agrandir la photo 8"><img src="assets/gallery/08-thumb.webp" alt="Mise en place d'une scène autour du palmier." loading="lazy" width="600" height="450" /></button></li>
+          <li><button type="button" class="gallery-item" data-index="8" aria-label="Agrandir la photo 9"><img src="assets/gallery/09-thumb.webp" alt="Vue d'ensemble du jardin pendant la répétition." loading="lazy" width="600" height="450" /></button></li>
+          <li><button type="button" class="gallery-item" data-index="9" aria-label="Agrandir la photo 10"><img src="assets/gallery/10-thumb.webp" alt="Direction d'acteur·rice·s, gestes en l'air." loading="lazy" width="600" height="450" /></button></li>
+          <li><button type="button" class="gallery-item" data-index="10" aria-label="Agrandir la photo 11"><img src="assets/gallery/11-thumb.webp" alt="Échanges entre comédien·ne·s." loading="lazy" width="600" height="450" /></button></li>
+          <li><button type="button" class="gallery-item" data-index="11" aria-label="Agrandir la photo 12"><img src="assets/gallery/12-thumb.webp" alt="Cercle énergique en fin de session." loading="lazy" width="600" height="450" /></button></li>
+        </ul>
+      </div>
+    </section>
+
+    <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Visionneuse de photos" hidden>
+      <button class="lightbox-close" aria-label="Fermer">&times;</button>
+      <button class="lightbox-prev" aria-label="Photo précédente">&#10094;</button>
+      <button class="lightbox-next" aria-label="Photo suivante">&#10095;</button>
+      <figure class="lightbox-frame">
+        <img id="lightbox-img" src="" alt="" />
+        <figcaption id="lightbox-caption" class="lightbox-caption"></figcaption>
+      </figure>
+    </div>
 
     <section id="contact" class="section">
       <div class="container grid-2">
