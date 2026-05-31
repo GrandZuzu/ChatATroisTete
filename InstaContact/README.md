@@ -78,6 +78,36 @@ Replies** (`POST /{ig-user-id}/messages` avec `recipient: { comment_id }`).
 
 ---
 
+## Setup
+
+Pré-requis : avoir déjà suivi `docs/META-INSTAGRAM-SETUP.md` (compte Business
+lié à une Page Facebook + app Meta + token long-lived).
+
+1. **Permissions Meta** — en plus de `instagram_content_publish`, demander
+   (Explorer + App Review) :
+   - `instagram_manage_comments` — lire les commentaires d'un post
+   - `instagram_manage_messages` — envoyer les réponses privées (DM)
+2. **Variables d'environnement** (`.env.local` + Vercel) — l'outil réutilise
+   celles de la publication :
+   ```
+   INSTAGRAM_BUSINESS_ID=17841400000000000
+   INSTAGRAM_ACCESS_TOKEN=EAA…(long-lived, avec les 2 permissions ci-dessus)
+   ```
+   Sans ces valeurs, l'endpoint `/api/instagram/comment-dm` renvoie un **503
+   explicite** (rien n'est envoyé).
+3. **Publier un post avec un appel à l'action**, ex. : *« Commente **INFO** et
+   on t'envoie le lien de la billetterie en DM 🎭 »*.
+4. **Récupérer l'ID du média** du post (voir « Trouver l'ID d'un post »
+   ci-dessous).
+5. **Lancer la campagne** depuis l'admin (voir « Utilisation » ci-dessous) :
+   d'abord **Aperçu** (aucun envoi), puis **Envoyer les DM**.
+
+Rappels : fenêtre de **7 jours** après chaque commentaire, **1 DM par
+personne** (dédup automatique), envois espacés (~1/s) et plafonnés
+(`maxSends`).
+
+---
+
 ## Utilisation (interface admin)
 
 1. Connecte-toi à l'admin → onglet **InstaContact** (`/admin/instacontact`).
