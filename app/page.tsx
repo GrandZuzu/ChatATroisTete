@@ -14,25 +14,27 @@ export default function Home() {
             <div className="curtain curtain-right" />
           </div>
           <div className="container hero-inner">
-            <img
-              src="/assets/logo.jpg"
-              alt=""
-              className="hero-logo"
-              width={120}
-              height={120}
-            />
-            <p className="eyebrow">Troupe de comédie musicale</p>
-            <h1 className="hero-title">
-              Le Chat<br />
-              <span className="accent">à 3 Têtes</span>
-            </h1>
-            <p className="hero-sub">
-              Trois voix, mille histoires. Une troupe qui chante, danse et joue
-              pour faire vibrer la scène.
-            </p>
-            <div className="hero-actions">
-              <a href="#spectacle" className="btn btn-primary">Découvrir le spectacle</a>
-              <a href="#contact" className="btn btn-ghost">Nous contacter</a>
+            <div className="hero-text">
+              <p className="eyebrow">Troupe de comédie musicale</p>
+              <h1 className="hero-title">
+                Le Chat<br />
+                <span className="accent">à 3 Têtes</span>
+              </h1>
+              <p className="hero-sub">
+                Trois voix, mille histoires. Une troupe qui chante, danse et joue
+                pour faire vibrer la scène.
+              </p>
+              <div className="hero-actions">
+                <a href="#spectacle" className="btn btn-primary">Découvrir le spectacle</a>
+                <a href="#contact" className="btn btn-ghost">Nous contacter</a>
+              </div>
+            </div>
+            <div className="hero-image">
+              <img
+                src="/assets/logo.jpg"
+                alt="Logo Le Chat à 3 Têtes"
+                className="hero-logo"
+              />
             </div>
           </div>
         </section>
