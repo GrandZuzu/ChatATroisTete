@@ -46,7 +46,10 @@ DARK_THRESH = 80      # un pixel est « noir » si max(R,G,B) < ce seuil
 FRAME_MAX = 0.10      # épaisseur de cadre détectable, en fraction du côté
 FRAME_FILL = 0.85     # fraction de pixels noirs pour considérer une ligne de cadre
 CROP_MARGIN = 12      # marge conservée autour du sujet, en pixels
-FEATHER = 1.0         # adoucissement des bords (rayon de flou de l'alpha)
+SHRINK = 2            # érosion du masque (px) : mange les bords anticrénelés
+                      # teintés par le fond (le cerne noir du dessin absorbe
+                      # la perte → invisible) et supprime ainsi le halo
+FEATHER = 0.6         # adoucissement des bords (rayon de flou de l'alpha)
 
 
 def trim_frame(rgb):
@@ -87,13 +90,23 @@ def cutout_alpha(rgb):
     background = np.isin(lbl, edge_labels)
 
     # Personnage = la plus grande zone opaque (élimine texte/îlots flottants).
+    # On NE perce PAS les pixels « couleur de fond » à l'intérieur du sujet :
+    # un fond sombre (ex. violet de Dolores) est proche du noir, et percer
+    # rendrait transparents les traits noirs du dessin (cernes, micro...).
+    # Le vrai fond reste transparent car retiré via `background` (relié aux
+    # bords) ; les trous internes sont comblés pour garder le sujet plein.
     fg = ~background
     comp, n = ndimage.label(fg)
     if n == 0:
         return np.zeros(rgb.shape[:2], np.uint8)
     sizes = np.bincount(comp.ravel())
     sizes[0] = 0
-    keep = (comp == sizes.argmax()) & ~bg_like  # perce les trous de fond enfermés
+    keep = ndimage.binary_fill_holes(comp == sizes.argmax())
+
+    # Rétrécit le sujet pour éliminer l'anneau de pixels de bord teintés par
+    # le fond (halo). N'entame que le cerne noir du dessin → imperceptible.
+    if SHRINK:
+        keep = ndimage.binary_erosion(keep, iterations=SHRINK)
 
     alpha = np.where(keep, 255, 0).astype(np.uint8)
     if FEATHER:
