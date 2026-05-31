@@ -154,6 +154,23 @@ Le bouton « Publier sur Instagram » dans l'admin doit alors fonctionner.
 
 ---
 
+## Permissions supplémentaires pour InstaContact (Comment-to-DM)
+
+L'outil **InstaContact** (`/admin/instacontact`, voir `InstaContact/README.md`)
+contacte par DM les personnes ayant *commenté* un post. Il réutilise le même
+compte Business et le même token, mais demande **deux permissions de plus** à
+l'étape 4 (Explorer) et à l'App Review (étape 5) :
+
+- `instagram_manage_comments` — lire les commentaires d'un post
+- `instagram_manage_messages` — envoyer les réponses privées (DM)
+
+> ⚠️ On ne peut **pas** récupérer la liste des comptes qui ont *liké* un post
+> (l'API ne l'expose pas), ni envoyer de DM à froid. La passerelle conforme
+> passe obligatoirement par les **commentaires** + les réponses privées
+> (fenêtre de 7 jours). Détails dans `InstaContact/README.md`.
+
+---
+
 ## Limitations à connaître
 
 - **Stories via API** : nécessite `instagram_content_publish` validé.

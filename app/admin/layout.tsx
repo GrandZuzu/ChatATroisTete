@@ -26,6 +26,7 @@ export default async function AdminLayout({
         </Link>
         <nav>
           <Link href="/admin">Articles</Link>
+          <Link href="/admin/instacontact">InstaContact</Link>
           <Link href="/" target="_blank">Voir le site ↗</Link>
           <span style={{ opacity: 0.6, fontSize: 13 }}>{user.email}</span>
           <LogoutButton />

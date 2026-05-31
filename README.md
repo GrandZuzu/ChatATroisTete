@@ -18,6 +18,10 @@ des articles vers **Instagram** via l'API Graph (feed / story).
   articles, upload d'image de couverture, publication
 - 📷 **Publication Instagram** : depuis l'admin, en feed ou story (sous
   réserve d'app Meta validée)
+- 💬 **InstaContact** (`/admin/instacontact`) : campagne « Comment-to-DM » —
+  contacte par message privé les personnes qui ont **commenté** un post
+  (alternative conforme au « DM des likers », impossible via l'API — voir
+  `InstaContact/README.md`)
 
 ---
 
@@ -154,7 +158,9 @@ Instagram » dans l'admin renvoie une erreur explicite.
 │  │     └─ [id]/page.tsx
 │  └─ api/
 │     ├─ auth/callback/       # callback Supabase
-│     └─ instagram/publish/   # POST → publish to IG
+│     ├─ instagram/publish/   # POST → publish to IG
+│     └─ instagram/comment-dm/# POST → campagne Comment-to-DM (InstaContact)
+├─ InstaContact/              # outil Comment-to-DM (README + lib)
 ├─ components/                # Nav, Footer, Gallery (lightbox)
 ├─ lib/
 │  ├─ articles.ts             # types + helpers
@@ -174,6 +180,7 @@ Instagram » dans l'admin renvoie une erreur explicite.
 - ✅ Site vitrine + galerie
 - ✅ Blog admin + public
 - ✅ Squelette Instagram (en attente de validation Meta)
+- ✅ InstaContact — Comment-to-DM (en attente des permissions messaging Meta)
 - ⏭ Auto-refresh du token IG (cron)
 - ⏭ Reels (vidéo + polling du statut container)
 - ⏭ Programmation différée des publications
