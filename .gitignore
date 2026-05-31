@@ -36,3 +36,10 @@ public/assets/photos-web/
 
 # Types générés
 *.tsbuildinfo
+
+# Python (scripts utilitaires)
+__pycache__/
+*.pyc
+
+# TaskFlow (interne)
+.taskflow/
